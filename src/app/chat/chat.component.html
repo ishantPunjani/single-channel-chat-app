@@ -1,0 +1,50 @@
+<div class="cardCotainer">
+  <mat-card class="chatCard ">
+      <button mat-raised-button color="primary" class="submitBtn1" (click)="startCall()">Start Call</button>
+      <button mat-raised-button color="primary" class="submitBtn1" (click)="leave()">Leave Call</button>
+   <br> 
+   <hr> 
+    <div class="messages-component">
+      <div class="messages">
+        <div class="message messageBox" *ngFor="let message of messages">
+          <div class="myBox" *ngIf="checkUser(message.username)">
+
+            <span class="userLabel1">{{ message.username }}:</span>
+            <mat-card class="messageCard1">{{ message.message }}</mat-card>
+
+          </div>
+          <div *ngIf="!checkUser(message.username)">
+            <span class="userLabel">{{ message.username }}</span>:
+            <mat-card class="messageCard">{{ message.message }}</mat-card>
+          </div>
+        </div>
+      </div>
+      <div class="fixedPart"></div>
+      <app-messages></app-messages>
+      <div class="submitBtn">
+        <button mat-raised-button color="primary" (click)=leaveChat()>Leave</button>
+      </div>
+    </div>
+
+    <h3>{{alert}}</h3>
+    <h3>{{leftAlert}}</h3>
+  </mat-card>
+    <div class="videoCall">
+    <div id="agora_local" #video>
+    </div>
+    <div class="remote-containers" #video>
+        <div class="remote_calls" *ngFor="let remote of remoteCalls;" [id]="remote">
+        </div>
+        </div>
+</div>
+  <mat-card class="activeListCard">
+    <div>
+      <p class="userLabel">Active users list:</p>
+      <ng-container *ngFor="let user of activeUsers">
+        <div *ngIf="compare(user.username)">
+          <li class="userLabel1">{{user.username}}</li>
+        </div>
+      </ng-container>
+    </div>
+  </mat-card>
+  </div>

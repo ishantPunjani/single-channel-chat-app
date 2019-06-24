@@ -1,0 +1,86 @@
+
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.pageBackground {
+   box-sizing: border-box;
+
+
+.example-card {
+    max-width: 400px;
+    margin-top:2% ;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  
+  .example-header-image {
+    background-image: url('../../assets/chatIcon.jpg');
+    background-size: cover;
+  }
+  .title{
+    font-size: 16px;
+  }
+  .description {
+    text-align: center;
+  }
+    .title,
+    .description,
+    .subtitle{
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.75;
+        letter-spacing: 0.44px;
+        color: $azure;
+    }
+  .loginLabel {
+    width: 157px;
+    height: 28px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: 0.44px;
+    color: $azure;
+    flex: 2;
+  }
+  .inputBox {
+      
+      border: solid 2px $azure;
+      border-radius: 3px;
+      height: 30px;
+      flex:5 ;
+  }
+  .form {
+     
+      display: flex;
+      flex-direction: column;
+  }
+  .fields {
+    padding: 5px 24px;
+   display: flex;
+  }
+  .submitBtn {
+    align-self: center;
+  width: 100%;
+  padding-left: 16%;
+
+  button{
+      width: 90%;
+  }
+  }
+  .mat-raised-button[disabled][disabled] {
+      background-color: lightgray;
+  }
+  .mat-raised-button{
+    background-color:$azure;
+}
+
+.newUser {
+   @include status;
+}
+
+}

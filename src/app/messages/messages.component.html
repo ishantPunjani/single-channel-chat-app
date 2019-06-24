@@ -1,0 +1,15 @@
+<div class="new-message-component">
+  <div class="field userName">
+    <label>Username : </label>
+    <label for="user">{{user}}</label>
+  </div>
+  <div class="field textBox">
+    <label for="message">Message</label>
+    <input id="message" [(ngModel)]="message">
+  </div>
+<div class="submitBtn">
+  <button mat-raised-button color="primary" (click)="newMessage()" class="btn btn-default">Send</button>
+</div>
+</div>
+
+<h3>{{emotion.emotion}}</h3>

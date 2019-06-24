@@ -1,0 +1,112 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.cardCotainer {
+    display: flex;
+    flex-direction: row;
+justify-content: center;
+}
+
+.messageCard{
+    max-width: 400px;
+}
+.chatCard {
+    margin-top: 3% !important;
+    // margin-left:auto;
+    margin-right: 20px;
+    max-width: 450px;
+    background-color:$chat_background;
+    height: 530px;
+    overflow-y: auto;
+}
+.activeListCard {
+    margin-top:3%;
+    background-color:$chat_background;
+    max-width: 200px; 
+    height: 200px;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $chat_background; 
+    border-radius: 3px;
+   
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #339966; 
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00cc66; 
+  }
+.messageBox {
+    display: flex;
+}
+.myBox{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   width: 100%;
+}
+.userLabel{
+    color:#cc00ff;
+}
+.userLabel1{
+    color:#009933;
+}
+.messageCard,
+.messageCard1{
+  color: $azure;
+}
+.userLabel,
+.messageCard,
+.userLabel1,
+.messageCard1 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: 0.44px; 
+}
+.submitBtn {
+    align-self: center;
+
+  width: 100%;
+  button{
+      width: 100%;
+  }
+  }
+  .mat-raised-button[disabled][disabled] {
+      background-color: lightgray;
+  }
+  .mat-raised-button{
+    background-color:$azure;
+}
+
+.submitBtn1 {
+    align-self: center;
+    margin-left: 10px;
+}
+.videoCall{
+    display: flex;
+    flex-direction: column;
+}
+#agora_local,.remote-containers div{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+#agora_local{
+    height: 150px;
+    width: 150px;
+    margin-top: 22% ;
+}
+.remote-containers div{
+    height: 250px;
+    width: 250px;
+    margin-top: 3%;
+}

@@ -1,0 +1,75 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.pageBackground {
+    box-sizing: border-box;
+ }
+ 
+ .example-card {
+     max-width: 400px;
+     margin-top:2% ;
+     margin-left:auto;
+     margin-right: auto;
+   }
+   img {
+       height: 170px;
+   }
+   .example-header-image {
+     background-image: url('../../assets/chatIcon.jpg');
+     background-size: cover;
+   }
+   .title{
+    font-size: 16px;
+  }
+  .description {
+    text-align: center;
+  }
+    .title,
+    .description,
+    .subtitle{
+        @include textStyle;
+    }
+    .loginLabel {
+        width: 157px;
+        height: 28px;
+        font-size: 16px;
+        @include textStyle;
+        flex: 2;
+      }
+      .inputBox {
+          
+          border: solid 2px $azure;
+          border-radius: 3px;
+          height: 30px;
+          flex:5 ;
+      }
+      .form {
+         
+          display: flex;
+          flex-direction: column;
+      }
+      .fields {
+        padding: 5px 24px;
+       display: flex;
+      }
+      .submitBtn {
+        margin-top: 20px;
+        align-self: center;
+      width: 100%;
+      padding-left: 16%;
+    
+      button{
+          width: 90%;
+          height: 35px;
+      }
+      }
+      .mat-raised-button[disabled][disabled] {
+          background-color: lightgray;
+      }
+      .mat-raised-button{
+        background-color:$azure;
+    }
+    .newUser {
+       @include status;
+    }
+    

@@ -1,0 +1,51 @@
+<div class="pageBackground">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title class="title">Ishant Chat App</mat-card-title>
+      <!-- <mat-card-subtitle class="subtitle">Chat everyday with new people</mat-card-subtitle> -->
+    </mat-card-header>
+    <img mat-card-image src="../../assets/BlogImage_Chat.jpg" alt="Photo of a Shiba Inu">
+    <!-- <mat-card-content>
+      <p class="description">
+        This app is equipeed with emotion detection.... So chat and express your feelings!!
+      </p>
+    </mat-card-content> -->
+    <mat-card-actions>
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="form">
+          <div class="fields">
+        <label  class="loginLabel">
+         <span> Username:</span></label>
+          <input class="inputBox" type="text" formControlName="username">
+        </div>
+        <div class="fields">
+        <label  class="loginLabel">
+         <span>Full Name: </span> </label>
+          <input class="inputBox" type="text" formControlName="fullName">
+        
+        </div>
+        <div class="fields">
+        <label  class="loginLabel">
+          <span>Password: </span> </label>
+          <input class="inputBox" type="text" formControlName="password">
+       </div>
+       <div class="fields">
+        <label  class="loginLabel">
+          <span>Confirm Password:</span> </label>
+          <input class="inputBox" type="text" formControlName="confirm_password">
+        </div>
+        <div class="fields">
+        <label  class="loginLabel">
+            <span> Email: </span></label>
+          <input class="inputBox" type="text" formControlName="Email">
+       </div>
+       <div class="fields submitBtn">
+          <button mat-raised-button color="primary" type="submit" [disabled]="!profileForm.valid">Create Account</button>
+        </div>
+      </form>
+      <div class="newUser">
+      <h3>{{Status}}</h3>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

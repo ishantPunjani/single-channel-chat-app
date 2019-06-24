@@ -1,0 +1,42 @@
+
+
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.userName,
+.textBox{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: 0.44px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #336600;
+}
+.userName{
+    text-align: center;
+}
+.textBox{
+input{
+    width: 100%;
+    border: 2px solid $azure;
+    border-radius: 3px;
+    height: 35px;
+}
+}
+.submitBtn {
+    align-self: center;
+  width:100%;
+  button{
+      width: 100%;
+  }
+  }
+  .mat-raised-button[disabled][disabled] {
+      background-color: lightgray;
+  }
+  .mat-raised-button{
+    background-color:$azure;
+}

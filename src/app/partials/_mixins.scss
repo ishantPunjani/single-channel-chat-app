@@ -1,0 +1,24 @@
+@mixin status{
+    text-align: center; 
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: 0.44px;
+    a {
+        text-decoration: none !important;
+        color: $azure;
+    }
+}
+
+@mixin textStyle{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.75;
+        letter-spacing: 0.44px;
+        color: $azure;
+}
